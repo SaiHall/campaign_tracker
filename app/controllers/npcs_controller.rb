@@ -1,6 +1,6 @@
 class NpcsController < ApplicationController
   def index
-    
+    @npcs = Npc.all
   end
 
   def new
@@ -8,6 +8,7 @@ class NpcsController < ApplicationController
   end
 
   def create
+    binding.pry
     npc = Npc.new({
       name: params[:name],
       age: params[:age],
@@ -20,8 +21,11 @@ class NpcsController < ApplicationController
         :intelligence => params[:intelligence_score],
         :wisdom => params[:wisdom_score],
         :charisma => params[:charisma_score]
-      }
-      alignment: "#{params[:alignment_1]} #{params[:alignment_2]}"
+      },
+      alignment: params[:alignment_1] + " " + params[:alignment_2]
     })
+    binding.pry
+    npc.save
+    redirect_to "/npcs"
   end
 end

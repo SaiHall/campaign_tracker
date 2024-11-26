@@ -1,3 +1,10 @@
 <h1> NPCs Index! Place holder</h1>
 
 <p>This is where we shall list NPCs alphabetically, and eventually include filtration options!</p>
+
+<h3>All NPCs</h3>
+
+<% @npcs.each do |npc| %>
+  <h4><a href="/npcs/<%= npc.id %>"><%= npc.name%></a></h4>
+  <p><%= npc.visual_description %></p>
+<% end %>
