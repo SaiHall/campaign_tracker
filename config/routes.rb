@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/", to: "welcome#index"
+
+  get "/npcs", to: "npcs#index"
+  get "npcs/new", to: "npcs#new"
+  post "/npcs/", to: "npcs#create"
 end

@@ -1,0 +1,28 @@
+
+
+<%= form_with url: "/npcs", method: "post", local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :age %>
+  <%= f.number_field :age, in: 0..400, step: 1 %><br>
+  <%= f.label :visual_description %>
+  <%= f.text_area :visual_description, size: "70x5" %><br>
+  <%= f.label :personality_description %>
+  <%= f.text_area :personality_description, size: "70x5" %><br>
+  <%= f.label :strength_score %>
+  <%= f.number_field :strength_score, in: 8..20, step: 1 %>
+  <%= f.label :dexterity_score %>
+  <%= f.number_field :dexterity_score, in: 8..20, step: 1 %>
+  <%= f.label :constitution_score %>
+  <%= f.number_field :constitution_score, in: 8..20, step: 1 %><br>
+  <%= f.label :intelligence_score %>
+  <%= f.number_field :intelligence_score, in: 8..20, step: 1 %>
+  <%= f.label :wisdom_score %>
+  <%= f.number_field :wisdom_score, in: 8..20, step: 1 %>
+  <%= f.label :charisma_score %>
+  <%= f.number_field :charisma_score, in: 8..20, step: 1 %><br>
+  <%= f.label :alignment %>
+  <%= f.select :alignment_1, ['Lawful', 'Neutral', 'Chaotic'] %>
+  <%= f.select :alignment_2, ['Good', 'Neutral', 'Evil'] %><br>
+  <%= f.submit "Spawn NPC" %>
+<% end %>
