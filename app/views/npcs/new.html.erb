@@ -22,7 +22,7 @@
   <%= f.label :charisma_score %>
   <%= f.number_field :charisma_score, in: 8..20, step: 1 %><br>
   <%= f.label :alignment %>
-  <%= f.select :alignment, ['Lawful', 'Neutral', 'Chaotic'] %>
-  <%= f.select :alignment, ['Good', 'Neutral', 'Evil'] %><br>
+  <%= f.select :alignment_1, ['Lawful', 'Neutral', 'Chaotic'] %>
+  <%= f.select :alignment_2, ['Good', 'Neutral', 'Evil'] %><br>
   <%= f.submit "Spawn NPC" %>
 <% end %>

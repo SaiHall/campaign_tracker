@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   get "/npcs", to: "npcs#index"
   get "npcs/new", to: "npcs#new"
+  post "/npcs/", to: "npcs#create"
 end
