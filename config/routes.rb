@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/", to: "welcome#index"
 
   get "/npcs", to: "npcs#index"
+  get "npcs/new", to: "npcs#new"
 end
